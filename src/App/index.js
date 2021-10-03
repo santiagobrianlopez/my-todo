@@ -1,8 +1,8 @@
 import React from 'react';
 import {TodoProvider} from '../TodoContext';
 import { AppUI } from './AppUI';
-// import './App.css';
-
+import './App.css';
+import {Footer} from '../Footer';
 
 // const defaultTodos = [
 //   {text: 'Cortar cebolla', completed: true},
@@ -16,6 +16,7 @@ function App() {
   return (
     <TodoProvider>
       <AppUI/>
+      <Footer/>
     </TodoProvider>
   );
 }

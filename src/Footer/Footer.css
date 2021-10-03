@@ -1,0 +1,14 @@
+footer{
+    text-align: center;
+}
+
+footer span{
+    display:block;
+    color: rgb(192, 96, 141);
+}
+
+footer img{
+    width:30px;
+    margin:10px;
+    filter: invert(53%) sepia(41%) saturate(380%) hue-rotate(290deg) brightness(84%) contrast(83%);
+}

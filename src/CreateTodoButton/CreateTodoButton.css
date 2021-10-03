@@ -3,10 +3,10 @@
     position:fixed;
     bottom:0;
     right:0;
-    width:3rem;
-    height:3rem;
+    width:2.5rem;
+    height:2.5rem;
     border-radius:100%;
-    background-color:skyblue;
+    background-color:rgb(140, 90, 153);
     border:none;
     color: white;
     font-size:2rem;
@@ -17,6 +17,6 @@
     transform: rotate(360deg);
 }
 .CreateTodoButton:active{
-    background-color: rgb(112, 187, 174);
+    background-color: rgb(192, 143, 231);
     border:1px solid black;
 }

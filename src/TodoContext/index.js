@@ -11,6 +11,7 @@ function TodoProvider(props){
         loading,
         error,
       } = useLocalStorage('TODOS_V1', []);
+
     
       const [searchValue, setSearchValue] = React.useState('');
       const [openModal, setOpenModal] = React.useState(false);
@@ -33,12 +34,13 @@ function TodoProvider(props){
         })
       }
     
-      const addTodo = (text) =>{
+      const addTodo = (text,textArea) =>{
         const newTodos = [...todos];
-    
+        // console.log(todos);
         newTodos.push({
           completed:false,
           text:text,
+          textArea:textArea,
         }); 
     
         saveTodos(newTodos);
@@ -67,6 +69,8 @@ function TodoProvider(props){
         
       };    
 
+      // console.log(todos)
+
     return(
         <TodoContext.Provider value={{
             loading,
@@ -88,7 +92,5 @@ function TodoProvider(props){
         </TodoContext.Provider>
     );
 }
-
-<TodoContext.Consumer></TodoContext.Consumer>
 
 export {TodoContext,TodoProvider}

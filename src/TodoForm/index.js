@@ -5,6 +5,7 @@ import './TodoForm.css';
 
 function TodoForm(){
     const [newTodoValue, setNewTodoValue] = React.useState('');
+    const [newTodoValueArea, setNewTodoValueArea] = React.useState('');
     
     const {
         addTodo,
@@ -15,23 +16,41 @@ function TodoForm(){
         setNewTodoValue(event.target.value);
     }
 
+    const onChangeArea = (event) => {
+        setNewTodoValueArea(event.target.value);
+    }
+
     const onCancel = () => {
         setOpenModal(false);
     }
     
     const onSubmit = (event) => {
         event.preventDefault();
-        addTodo(newTodoValue);
+        addTodo(newTodoValue, newTodoValueArea);
         setOpenModal(false);
     }
 
+    // console.log(newTodoValue)
+    // console.log(newTodoValueArea)
+
+
     return(
         <form onSubmit={onSubmit}>
-            <label>Escribe tu nuevo Todo</label>
+            <label>Escribe tu nueva Tarea</label>
+            <input 
+            className="Titulo"
+            placeholder='Ingresa un nuevo Titulo'
+            value={newTodoValue}
+            onChange={onChange} 
+            maxLength='30'
+            ></input>
             <textarea
-                value={newTodoValue}
-                onChange={onChange} 
-                placeholder='Cortar la Cebolla'
+                value={newTodoValueArea}
+                onChange={onChangeArea} 
+                placeholder='Ingresa la 
+                descripción de tu nueva 
+                tarea solo con 140 caracteres'
+                maxLength='140'
             />
             <div className="TodoForm-buttonContainer">
                 <button
