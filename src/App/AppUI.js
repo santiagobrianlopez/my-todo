@@ -30,7 +30,7 @@ function AppUI()  {
 
             {error && 'Desesperate hubo un error'}
             {loading && <MyLoader/>}
-            {(!loading && !searchedTodos.length) && <h3>Crea tu primera Tarea</h3>}
+            {(!loading && !searchedTodos.length) && <h3>Crea tu primera Tarea haciendo clic en el +</h3>}
             {searchedTodos.map(todo => (
             <TodoItem 
             key={todo.text} 
