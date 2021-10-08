@@ -17,6 +17,11 @@
     transform: rotate(360deg);
 }
 .CreateTodoButton:active{
-    background-color: rgb(192, 143, 231);
+    background-color: rgb(52, 26, 73);
+    border:1px solid black;
+}
+
+.CreateTodoButton:visited{
+    background-color: rgb(163, 19, 19);
     border:1px solid black;
 }

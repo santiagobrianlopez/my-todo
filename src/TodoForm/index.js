@@ -1,16 +1,12 @@
 import React from "react";
-import { TodoContext } from "../TodoContext";
 import './TodoForm.css';
 
 
-function TodoForm(){
+function TodoForm({addTodo,setOpenModal}){
     const [newTodoValue, setNewTodoValue] = React.useState('');
     const [newTodoValueArea, setNewTodoValueArea] = React.useState('');
     
-    const {
-        addTodo,
-        setOpenModal,
-    } = React.useContext(TodoContext);
+
     
     const onChange = (event) => {
         setNewTodoValue(event.target.value);
@@ -29,10 +25,6 @@ function TodoForm(){
         addTodo(newTodoValue, newTodoValueArea);
         setOpenModal(false);
     }
-
-    // console.log(newTodoValue)
-    // console.log(newTodoValueArea)
-
 
     return(
         <form onSubmit={onSubmit}>

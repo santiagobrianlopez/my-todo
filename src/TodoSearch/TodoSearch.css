@@ -14,3 +14,7 @@
 .TodoSearch:focus{
     border:5px solid rgb(177, 109, 143);
 }
+
+.TodoSearch:disabled{
+    opacity:25%;
+}
